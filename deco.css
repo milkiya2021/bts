@@ -4,6 +4,20 @@
   margin: 0;
 }
 
+@font-face {
+  font-family: 'MaplestoryOTFBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MaplestoryOTFLight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
@@ -12,7 +26,7 @@ body {
   background-color: #8590aa;
 }
 
-.navi_box {
+.navi_box {    
   position: sticky;
   top: 0;
   display: flex;
@@ -29,7 +43,7 @@ body {
   display: flex;
   align-items: center;
   padding: 1rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
@@ -44,6 +58,7 @@ body {
   border: none;
   width: auto;
   color: white;
+  font-size: 1.7rem;
 }
 
 .button:hover {
@@ -109,8 +124,9 @@ body {
   padding: 1rem 5rem;
   width: auto;
   height: auto;
-  font-size: 2rem;
-  font-family: "Dongle", sans-serif;
+  /*font-family: "Dongle", sans-serif;*/
+  font-family: 'MaplestoryOTFLight';
+  font-size: 1.5rem;
   color: #e7e3d4;
 }
 
@@ -131,7 +147,8 @@ body {
   padding: 1rem;
   margin: 0.5rem;
   text-align: center;
-  font-family: "Dongle", sans-serif;
+  /*font-family: "Dongle", sans-serif;*/
+  font-family: 'MaplestoryOTFBold';
   font-size: 3rem;
 }
 
@@ -156,7 +173,8 @@ body {
   text-align: center;
   padding: 2rem;
   margin: 2rem 0;
-  font-family: "Dongle", sans-serif;
+  /*font-family: "Dongle", sans-serif;*/
+  font-family: 'MaplestoryOTFLight';
   font-size: 2rem;
   color: black;
   background-color: #e7e3d4;
@@ -217,7 +235,8 @@ body {
   align-items: center;
   height: 50px;
   color: #e7e3d4;
-  font-family: "Dongle", sans-serif;
+  /*font-family: "Dongle", sans-serif;*/
+  font-family: 'MaplestoryOTFLight';
   font-size: 2rem;
   text-align: center;
 }
@@ -243,7 +262,8 @@ body {
 }
 
 .info_box_title {
-  font-family: "Dongle", sans-serif;
+  /*font-family: "Dongle", sans-serif;*/
+  font-family: 'MaplestoryOTFBold';
   font-size: 2rem;
   font-weight: bold;
   height: 50px;
@@ -260,7 +280,8 @@ body {
 }
 
 .info_box_desc {
-  font-family: "Dongle", sans-serif;
+  /*font-family: "Dongle", sans-serif;*/
+  font-family: 'MaplestoryOTFLight';
   font-size: 2rem;
   text-align: center;
   padding: 3rem 0.5rem;
