@@ -27,40 +27,31 @@
   <body>
     <!--여기는 네이게이션 바야 -->
     <header class="navi_box">
-      <div class="section_logo">All about BTS</div>
+      <div type="button" onclick="location.href= 'index.html'" class="section_logo">All about BTS</div>
       <div class="section_navi">
-        <button type="button" onclick="location.href= '#intro'" class="button">
+        <button type="button" onclick="location.href= '#intro_sec'" class="button1">
           Intro
         </button>
-        <button
-          type="button"
-          onclick="location.href= '#history'"
-          class="button"
-        >
+        <button type="button" onclick="location.href= '#history_sec'" class="button1">
           History
         </button>
-        <button
-          type="button"
-          onclick="location.href= '#gallery'"
-          class="button"
-        >
+        <button type="button" onclick="location.href= '#gallery_sec'" class="button1">
           Gallery
         </button>
-        <button type="button" onclick="location.href= '#media'" class="button">
+        <button type="button" onclick="location.href= '#media_sec'" class="button1">
           Media
         </button>
-        <button type="button" onclick="location.href= '#info'" class="button">
+        <button type="button" onclick="location.href= '#info_sec'" class="button1">
           Info
         </button>
-        <button type="button" onclick="location.href= '#guestbook'"class="button">
+        <button type="button" onclick="location.href= 'guest.html'" class="button1">
           GuestBook
-          <a href=".gusetbook_sec"></a>
         </button>
       </div>
     </header>
     <main>
       <!--여기는 로비페이지야 -->
-      <section class="lobby_sec" id="section_box">
+      <section class="lobby_sec" >
         <img class="lobby_img" src="https://cdn1.i-scmp.com/sites/default/files/styles/1920x1080/public/images/methode/2019/03/12/7348293c-3e24-11e9-b20a-0cdc8de4a6f4_image_hires_055900.jpg?itok=xEsqJrcq&v=1552341543g" alt="bts main사진" />
         <div class="lobby_text">
           (둘, 셋) 방! 탄! 안녕하세요. 방탄소년단입니다!
@@ -68,7 +59,7 @@
         </div>
       </section>
       <!--여기는 BTS소개 페이지야 -->
-      <section class="intro_sec section_box_intro" id="intro">
+      <section class="section_box" id="intro_sec">
         <div class="title">Who is BTS?</div>
         <div class="intro_img">
           <img class="lobby_img" src="https://i.pinimg.com/550x/ba/a6/6d/baa66d4f7ee14d321f1a4984db93e2c3.jpg" alt="bts main사진" />
@@ -95,44 +86,48 @@
           <div class="intro_member">
             <div class="intro_member_content">
               <img class="member"
-                src="https://search.pstatic.net/common?type=n&size=150x168&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F74%2F202206071540153051.jpg"
+                src="https://i.pinimg.com/236x/11/68/97/116897b76c0a8524e4c623231ac89c0b.jpg"
               />
-              <br />RM <br />
+              <div class ="name">RM</div>
+              <div class ="nickname">리더</div>
             </div>
             <div class="intro_member_content">
               <img class="member"
-                src="https://search.pstatic.net/common?type=n&size=150x168&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F88%2F202210251057335601.png"
+                src="https://i.pinimg.com/736x/30/a5/78/30a578e836ac03a651f54a673c6db5a9.jpg"
               />
-              <br />진
+              <div class ="name">진</div>
+              <div class ="nickname">서브보컬, 맏형,잇진 </div>
+              <br>
             </div>
             <div class="intro_member_content">
               <img class="member"
                 <!--src="https://search.pstatic.net/common?type=n&size=150x168&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2Fportrait%2F202206%2F20220602003044772.jpg"--
                 src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fc5%2F5d%2Fab%2Fc55dab87a6f336906a6fe9c7d17ae95b.jpg"
               />
-              <br />슈가
+              <div class ="name">슈가</div>
+              <div class ="nickname">본명은 민윤기, 래퍼, 프로듀서, 민윤</div>
             </div>
             <div class="intro_member_content">
               <img class="member"
-                src="https://search.pstatic.net/common?type=n&size=150x168&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F90%2F202207191154341831.png"
+                src="https://i.pinimg.com/originals/ba/ba/99/baba99f5a5890e964b42ec60a3a4023b.jpg"
               />
               <br />J-Hope
             </div>
             <div class="intro_member_content">
               <img class="member"
-                src="https://search.pstatic.net/common?type=n&size=150x168&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F91%2F202209291524497141.jpg"
+                src="https://data.whicdn.com/images/343295714/original.jpg"
               />
               <br />지민
             </div>
             <div class="intro_member_content">
               <img class="member"
-                src="https://search.pstatic.net/common?type=n&size=150x168&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F95%2F202209291524215121.jpg"
+                src="https://i.pinimg.com/736x/83/fb/e0/83fbe096c9d94c0f686444fe8d231955.jpg"
               />
               <br />V
             </div>
             <div class="intro_member_content">
               <img class="member"
-                src="https://search.pstatic.net/common?type=n&size=150x168&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F98%2F202209291522187791.jpg"
+                src="https://64.media.tumblr.com/ef397071e4dd5b24811dbe937f03a5a5/5fa6c379a5c871ec-4a/s640x960/588b51d71342bebab4669a04edd3ed994c12f945.jpg"
               />
               <br />J.K
             </div>
@@ -146,7 +141,7 @@
         </div>
       </section>
 
-      <section class="history_sec section_box" id="history">
+      <section class="section_box" id="history_sec">
         <div class="title">History</div>
         <div class="history_general history_box">
           2013년 6월 13일 싱글 앨범 《2 COOL 4 SKOOL》로 데뷔 <br />2015년
@@ -170,7 +165,7 @@
         </div>
       </section>
 
-      <section class="gallery_sec section_box" id="gallery">
+      <section class="section_box" id="gallery_sec ">
         <div class="title">Gallery</div>
         <div class="gallery_box">
           <div class="gallery_img">
@@ -211,7 +206,7 @@
         </div>
       </section>
 
-      <section class="media_sec section_box" id="media">
+      <section class="section_box" id="media_sec">
         <div class="title">Media</div>
         <div class="media_box">
           <div class="media">
@@ -284,7 +279,7 @@
           </div>
         </div>
       </section>
-      <section class="info_sec section_box" id="info">
+      <section class="section_box" id="info_sec">
         <div class="title">Information</div>
         <div class="info_box">
           <div class="info_box_list">
@@ -339,7 +334,7 @@
           </div>
         </div>
       </section>
-      <section class="guestbook_sec section_box">게스트북 페이지</section>
     </main>
+    <script src="button.js"></script>
   </body>
 </html>

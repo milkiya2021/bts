@@ -1,21 +1,35 @@
 * {
   font-size: 10px;
-  font-family: "Varela Round", sans-serif;
+  font-family: "MaplestoryOTFLight";
   margin: 0;
 }
 
 @font-face {
-  font-family: 'MaplestoryOTFBold';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
+  font-family: "MaplestoryOTFBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'MaplestoryOTFLight';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFLight.woff') format('woff');
+  font-family: "MaplestoryOTFLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFLight.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
+}
+
+@keyframes fadeIn {
+  /* 글목록이 아래에서 위로 올라오는 기능 ... 효과가 있나? */
+  from {
+    opacity: 0;
+    tranform: translateY(20px);
+  }
+  to {
+    opacity: 3;
+    transform: none;
+  }
 }
 
 .material-symbols-outlined {
@@ -24,15 +38,16 @@
 
 body {
   background-color: #8590aa;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-.navi_box {    
+.navi_box {
   position: sticky;
   top: 0;
   display: flex;
   justify-content: space-between;
   padding: 0;
-  background-color: #b23850;
+  background-color: #b23850d3;
   color: white;
   width: 100%;
   height: 5rem;
@@ -47,59 +62,68 @@ body {
   font-weight: bold;
 }
 
+.section_logo:hover {
+  color: #3b8beb;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
 .section_navi {
   display: flex;
   justify-content: space-evenly;
   padding: 1rem;
 }
 
-.button {
+.button1 {
   background-color: transparent;
   border: none;
   width: auto;
   color: white;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
 }
 
-.button:hover {
+.button1:hover {
   color: #3b8beb;
   font-weight: bolder;
+  cursor: pointer;
 }
 
 .lobby_sec {
   width: 100%;
   position: relative;
   text-align: center;
+  position: relative;
 }
 
 .lobby_img {
   width: 100%;
   height: auto;
-  position: relative;
 }
 
 .lobby_text {
-  font-family: "Dongle", sans-serif;
+  font-family: "MaplestoryOTFBold";
   width: auto;
   position: absolute;
-  top: 10%;
+  top: 80%;
   left: 30%;
-  font-size: 3rem;
-  text-align: center;
+  margin: 0;
+  transform: translate(-20%, -70%);
+  font-size: 2.5rem;
   color: white;
-  text-shadow: #ffffff 1px 0 10px;
   z-index: 5;
 }
 
 .section_box {
+  /*이 코드도 거의 유명 무실.. 나중에 삭제할것 */
   width: auto;
   height: auto;
 }
 
+/* 아래는 안쓰는 것 같다. 
 .section_box_intro {
   width: auto;
   height: auto;
-}
+}*/
 
 .title {
   display: block;
@@ -108,7 +132,6 @@ body {
   font-family: inherit;
   font-size: 3rem;
   text-align: center;
-  text-shadow: 2px 4px 2px gray;
   color: #e7e3d4;
 }
 
@@ -125,8 +148,9 @@ body {
   width: auto;
   height: auto;
   /*font-family: "Dongle", sans-serif;*/
-  font-family: 'MaplestoryOTFLight';
+  font-family: "MaplestoryOTFLight";
   font-size: 1.5rem;
+  line-height: 2rem;
   color: #e7e3d4;
 }
 
@@ -148,17 +172,17 @@ body {
   margin: 0.5rem;
   text-align: center;
   /*font-family: "Dongle", sans-serif;*/
-  font-family: 'MaplestoryOTFBold';
-  font-size: 3rem;
+  font-family: "MaplestoryOTFLight";
+  font-size: 2.5rem;
 }
 
-.member{   
-  width: 150px;  
+.member {
+  width: 150px;
   height: 168px;
   object-fit: cover;
 }
 
-.history_sec {
+#history_sec {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -167,15 +191,16 @@ body {
 .history_box {
   display: flex;
   justify-content: center;
-  width: 300px;
+  width: 330px;
   border: 1px solid #e7e3d4;
   border-radius: 10px;
   text-align: center;
   padding: 2rem;
   margin: 2rem 0;
   /*font-family: "Dongle", sans-serif;*/
-  font-family: 'MaplestoryOTFLight';
-  font-size: 2rem;
+  font-family: "MaplestoryOTFLight";
+  font-size: 1.5rem;
+  line-height: 2rem;
   color: black;
   background-color: #e7e3d4;
 }
@@ -236,8 +261,8 @@ body {
   height: 50px;
   color: #e7e3d4;
   /*font-family: "Dongle", sans-serif;*/
-  font-family: 'MaplestoryOTFLight';
-  font-size: 2rem;
+  font-family: "MaplestoryOTFLight";
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -263,7 +288,7 @@ body {
 
 .info_box_title {
   /*font-family: "Dongle", sans-serif;*/
-  font-family: 'MaplestoryOTFBold';
+  font-family: "MaplestoryOTFBold";
   font-size: 2rem;
   font-weight: bold;
   height: 50px;
@@ -281,7 +306,7 @@ body {
 
 .info_box_desc {
   /*font-family: "Dongle", sans-serif;*/
-  font-family: 'MaplestoryOTFLight';
+  font-family: "MaplestoryOTFLight";
   font-size: 2rem;
   text-align: center;
   padding: 3rem 0.5rem;
@@ -312,7 +337,7 @@ body {
     position: sticky;
     top: 0;
     padding: 0;
-    background-color: #b23850;
+    background-color: #b23850d3;
     color: white;
     height: 100%;
     z-index: 10;
@@ -332,5 +357,9 @@ body {
     display: flex;
     flex-direction: column;
     padding: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
   }
 }
