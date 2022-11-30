@@ -28,3 +28,11 @@ button[3].onclick = function () {
 button[4].onclick = function () {
   window.scroll({ top: fifthTop, behavior: "smooth" });
 };
+
+//버거 버튼을 눌렀을때 메뉴가 나오게 하기
+const burgerBtn = document.querySelector(".burger");
+const menu = document.querySelector(".section_navi");
+
+burgerBtn.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});

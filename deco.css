@@ -37,8 +37,25 @@
 }
 
 body {
-  background-color: #8590aa;
+  /*  background-color: #f38181;*/
   animation: fadeIn 0.5s ease-in-out;
+
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+/*배경이미지 애니메이션 효과*/
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .navi_box {
@@ -46,24 +63,52 @@ body {
   top: 0;
   display: flex;
   justify-content: space-between;
-  padding: 0;
-  background-color: #b23850d3;
-  color: white;
-  width: 100%;
+  background-color: #95e1d3;
+  border-radius: 0 0 10px 10px;
   height: 5rem;
-  z-index: 10;
+  z-index: 5;
 }
 
 .section_logo {
   display: flex;
   align-items: center;
+  color: #f38181;
   padding: 1rem;
   font-size: 2.5rem;
   font-weight: bold;
+
+  /*글자 애니메이션시키기 */
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    /*#231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%*/ #95e1d3 0%,
+    #f38181 29%,
+    #fce38a 67%,
+    #eaffd0 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  /*text-fill-color: transparent;*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  /*display: inline-block;
+  /*font-size: 190px;*/
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }
 
 .section_logo:hover {
-  color: #3b8beb;
   font-weight: bolder;
   cursor: pointer;
 }
@@ -71,28 +116,36 @@ body {
 .section_navi {
   display: flex;
   justify-content: space-evenly;
-  padding: 1rem;
+  /*width: 100%;
+  margin: 0;
+  padding: 0;*/
+}
+
+.burger {
+  display: none;
 }
 
 .button1 {
   background-color: transparent;
   border: none;
-  width: auto;
-  color: white;
+  color: #eaffd0;
   font-size: 1.3rem;
+  width: 100%;
+  padding: 0.2rem 1rem;
+  text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
 }
 
 .button1:hover {
-  color: #3b8beb;
+  color: #fce38a;
   font-weight: bolder;
   cursor: pointer;
 }
 
+/*로비(제일 첫번째 페이지)를 치장하는 곳이다*/
 .lobby_sec {
+  position: relative;
   width: 100%;
-  position: relative;
   text-align: center;
-  position: relative;
 }
 
 .lobby_img {
@@ -105,12 +158,12 @@ body {
   width: auto;
   position: absolute;
   top: 80%;
-  left: 30%;
+  left: 40%;
   margin: 0;
-  transform: translate(-20%, -70%);
+  transform: translate(-30%, -80%);
   font-size: 2.5rem;
-  color: white;
-  z-index: 5;
+  color: #eaffd0;
+  z-index: 3;
 }
 
 .section_box {
@@ -128,11 +181,12 @@ body {
 .title {
   display: block;
   margin: 0px auto;
-  padding: 8rem 5rem 1rem 3rem;
+  padding: 8rem 5rem 1rem;
   font-family: inherit;
-  font-size: 3rem;
+  font-size: 3.5rem;
   text-align: center;
-  color: #e7e3d4;
+  color: #fce38a;
+  text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
 }
 
 .intro_img {
@@ -141,17 +195,17 @@ body {
   padding: 1rem 5rem 1rem 5rem;
   width: 30%;
   text-align: center;
+  border-radius: 50%;
 }
 
 .intro_text {
   padding: 1rem 5rem;
   width: auto;
   height: auto;
-  /*font-family: "Dongle", sans-serif;*/
   font-family: "MaplestoryOTFLight";
   font-size: 1.5rem;
   line-height: 2rem;
-  color: #e7e3d4;
+  color: #eaffd0;
 }
 
 .intro_member {
@@ -164,7 +218,8 @@ body {
 
 .intro_member_content {
   border-radius: 10px;
-  background-color: #e7e3d4;
+  background-color: #eaffd0;
+  color: #f38181;
   border-radius: 5%;
   width: auto;
   height: 25rem;
@@ -182,6 +237,15 @@ body {
   object-fit: cover;
 }
 
+.name {
+  font-size: 1.5rem;
+  padding: 0.2rem;
+}
+
+.nickname {
+  font-size: 1.1rem;
+}
+
 #history_sec {
   display: flex;
   flex-direction: column;
@@ -192,7 +256,7 @@ body {
   display: flex;
   justify-content: center;
   width: 330px;
-  border: 1px solid #e7e3d4;
+  border: 1px solid #eaffd0;
   border-radius: 10px;
   text-align: center;
   padding: 2rem;
@@ -201,8 +265,8 @@ body {
   font-family: "MaplestoryOTFLight";
   font-size: 1.5rem;
   line-height: 2rem;
-  color: black;
-  background-color: #e7e3d4;
+  color: #f38181;
+  background-color: #eaffd0;
 }
 
 .gallery_box {
@@ -221,6 +285,7 @@ body {
   width: 300px;
   height: 200px;
   text-align: center;
+  border-radius: 10%;
 }
 
 .gallery_img img {
@@ -259,8 +324,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 50px;
-  color: #e7e3d4;
-  /*font-family: "Dongle", sans-serif;*/
+  color: #eaffd0;
   font-family: "MaplestoryOTFLight";
   font-size: 1.5rem;
   text-align: center;
@@ -280,20 +344,20 @@ body {
   flex-direction: column;
   align-items: center;
   width: 250px;
-  height: 500px;
+  height: 400px;
   margin: 1rem;
-  background-color: #e7e3d4;
+  padding: 1rem;
+  background-color: #eaffd0;
   border-radius: 10px;
 }
 
 .info_box_title {
-  /*font-family: "Dongle", sans-serif;*/
   font-family: "MaplestoryOTFBold";
   font-size: 2rem;
   font-weight: bold;
   height: 50px;
   text-align: center;
-  color: #b23850;
+  color: #f38181;
 }
 
 .info_box_thum {
@@ -305,9 +369,9 @@ body {
 }
 
 .info_box_desc {
-  /*font-family: "Dongle", sans-serif;*/
   font-family: "MaplestoryOTFLight";
-  font-size: 2rem;
+  color: #f38181;
+  font-size: 1.5rem;
   text-align: center;
   padding: 3rem 0.5rem;
 }
@@ -332,13 +396,21 @@ body {
   object-fit: fill;
 }
 
+.footer {
+  display: block;
+  margin: 1rem;
+  padding: 3rem;
+  text-align: center;
+  color: #eaffd0;
+}
+
 @media only screen and (max-width: 480px) {
   .navi_box {
     position: sticky;
     top: 0;
     padding: 0;
-    background-color: #b23850d3;
-    color: white;
+    background-color: #95e1d3;
+    color: #fce38a;
     height: 100%;
     z-index: 10;
     display: flex;
@@ -354,12 +426,44 @@ body {
   }
 
   .section_navi {
-    display: flex;
+    display: none;
     flex-direction: column;
-    padding: 1rem;
+  }
+
+  .button1 {
+    width: 100%;
+    /* padding: 0.2rem 1rem 0.5rem;*/
+  }
+
+  .button1:hover {
+    background-color: #f38181;
+  }
+
+  .burger {
+    display: block;
+    color: #eaffd0;
+    font-size: 30px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
   }
 
   .title {
     font-size: 2rem;
+  }
+
+  .lobby_text {
+    font-size: 2rem;
+  }
+
+  .section_navi.active {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    max-width: 1024px;
+    margin: auto;
   }
 }
